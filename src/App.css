@@ -1,38 +1,190 @@
 .App {
+  background-color: #F3F7F9;
+  height: 100vh;
+}
+
+.homepage{
+  width: 100vw;
+  max-width: 700px;
+  margin: 0 auto
+}
+
+.title{
+  font-size: 30px;
+  font-weight: 400;
+  color: #222;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-greeting{
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-info {
+  padding-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-info .price{
+  color: #fd6542;
+}
+
+p{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.transaction-section{
+  padding: 0px 20px;
+}
+
+.transaction-list {
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
   display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.transaction-list.success {
+  border-left: 3px solid #56b586;
+}
+.transaction-list.pending {
+  border-left: 3px solid #fd6542;
+}
+.transaction-list a {
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.transaction-list .detail-section {
+  width: 70%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: center;
+  text-align: left;
+}
+.transaction-list .detail-section .bank-group-name {
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+.transaction-list .detail-section .receiver-name {
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+.transaction-list .status-section {
+  width: 30%;
+  align-self: center;
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+
+.btn {
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn.btn-pending {
+  background-color: transparent;
+  border: 1px solid #fd6542;
+  color: #222;
+}
+
+.btn.btn-back {
+  background-color: transparent;
+  border: 1px solid #fd6542;
+  color: #fd6542
+}
+
+.btn.btn-success {
+  background-color: #56b586;
+  border: 1px solid #56b586;
+  color: #fff;
+}
+
+.details-section {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.details-section.header .side-id {
+  width: 70%;
+}
+.details-section.header .side-button {
+  width: 30%;
+  text-align: end;
+}
+.details-section.main-content {
+  margin-bottom: 20px;
+}
+.details-section.main-content .left-icon {
+  width: 15%;
+  color: #fd6542;
+  font-size: 20px;
+}
+.details-section.main-content .detail-list {
+  width: 85%;
+  flex-direction: column;
+}
+.details-section.main-content .detail-list .row-list {
+  text-align: left;
+  padding-bottom: 10px;
+}
+.details-section.main-content .detail-list .row-list .label {
+  color: #222;
+  font-weight: 600;
+}
+.details-section.main-content .detail-list .row-list .detail-text {
+  color: #222;
+}
+.details-section.main-content .detail-list .row-list .inline-list {
+  flex-direction: row;
+  font-size: 12px;
+}
+.details-section.main-content .detail-list .row-list .inline-list .label {
+  font-weight: 600;
+}
+
+.space-left-right{
+  padding: 0px 5px;
+}
+
+.mini{
+  font-size: 10px;
+}
+
+.form-search {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+}
+.form-search .input-search {
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+  border-right: 0px;
+  border-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 65%;
+  border-color: #cacaca;
+}
+
+.form-search .input-sort {
+  height: 32px;
+  width: calc(100% - 65%);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-color: #cacaca;
+}
+
+input:focus-visible, select:focus-visible {
+  outline: none;
+}
+
+select option:hover {
+  background-color: #FFECE8;
 }
